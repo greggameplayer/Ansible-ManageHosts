@@ -7,3 +7,7 @@
     - include_tasks: roles/reboot/tasks/oci.yml
     - include_tasks: roles/stop/tasks/oci.yml
     - include_tasks: roles/start/tasks/oci.yml
+
+- hosts: proxmox
+  tasks:
+    - include_tasks: roles/start/tasks/proxmox.yml
