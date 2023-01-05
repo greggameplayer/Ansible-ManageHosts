@@ -1,0 +1,12 @@
+---
+- name: Install Python SDK
+  collections:
+    - oracle.oci
+  hosts: localhost
+  tasks:
+    - name: Installing oci python library using Ansible pip module
+      pip:
+        name: oci
+        state: present
+        executable: pip3
+      become: yes

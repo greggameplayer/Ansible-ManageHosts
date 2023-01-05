@@ -1,0 +1,14 @@
+---
+# This playbook is used to reboot oci host
+- name: Check connectivity
+  oracle.oci.oci:
+    config_file_location: "{{ config_file_location }}"
+    config_profile_name: "{{ config_profile_name }}"
+    compartment_id: "{{ compartment_id }}"
+    instance_id: "{{ instance_id }}"
+    state: present
+- name: Reboot OCI host
+  oracle.oci.oci_instance_actions:
+    instance_id: "{{ instance_id }}"
+    action: 'SOFTRESET'
+    state: 'present'

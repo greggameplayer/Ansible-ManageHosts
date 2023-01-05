@@ -1,0 +1,6 @@
+---
+# This playbook is used to attribute roles
+
+- hosts: oci
+  tasks:
+    - roles/reboot/tasks/oci.yml
