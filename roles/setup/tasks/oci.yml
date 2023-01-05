@@ -7,3 +7,5 @@
     umask: "0022"
   become: yes
   delegate_to: localhost
+  tags:
+    - setup
