@@ -1,7 +1,7 @@
 ---
 # This playbook is used to reboot oci host
 - name: Reboot OCI host
-  oracle.oci.oci_instance_actions:
+  oracle.oci.oci_compute_instance_actions:
     instance_id: "{{ instance_id }}"
     action: 'SOFTRESET'
     state: 'present'
