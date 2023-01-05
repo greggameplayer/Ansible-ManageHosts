@@ -1,8 +1,8 @@
 ---
 - name: Install OCI Python SDK
-  local_action:
-    pip:
-      name: oci
-      state: present
-      executable: pip3
-    become: yes
+  connection: local
+  pip:
+    name: oci
+    state: present
+    executable: pip3
+  become: yes
