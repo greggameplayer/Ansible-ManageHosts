@@ -1,0 +1,7 @@
+---
+# This playbook is used to start proxmox host
+- name: Start Proxmox host
+  community.general.proxmox:
+    vmid: "{{ inventory_hostname }}"
+    state: started
+    timeout: 90
