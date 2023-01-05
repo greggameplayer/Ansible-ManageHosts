@@ -3,5 +3,5 @@
 - name: Reboot OCI host
   oracle.oci.oci_compute_instance_actions:
     instance_id: "{{ instance_id }}"
-    action: 'SOFTRESET'
+    action: 'softreset'
     state: 'present'
