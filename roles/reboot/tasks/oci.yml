@@ -4,4 +4,3 @@
   oracle.oci.oci_compute_instance_actions:
     instance_id: "{{ instance_id }}"
     action: 'softreset'
-    state: 'present'
