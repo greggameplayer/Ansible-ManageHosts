@@ -3,4 +3,4 @@
 
 - hosts: oci
   tasks:
-    - roles/reboot/tasks/oci.yml
+    - include: roles/reboot/tasks/oci.yml
