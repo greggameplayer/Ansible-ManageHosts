@@ -1,4 +1,5 @@
 plugin: community.general.proxmox
 want_facts: true
+validate_certs: false
 groups:
   proxmox: 'proxmox'
