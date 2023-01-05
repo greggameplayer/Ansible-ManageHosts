@@ -1,0 +1,10 @@
+---
+# This playbook is used to stop oci host
+- name: Stop OCI host
+  oracle.oci.oci_compute_instance_actions:
+    instance_id: "{{ instance_id }}"
+    action: 'softstop'
+  register: stop_result
+  delegate_to: localhost
+  tags:
+    - stop

@@ -1,0 +1,10 @@
+---
+# This playbook is used to start oci host
+- name: Start OCI host
+  oracle.oci.oci_compute_instance_actions:
+    instance_id: "{{ instance_id }}"
+    action: 'start'
+  register: start_result
+  delegate_to: localhost
+  tags:
+    - start
