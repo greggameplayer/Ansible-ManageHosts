@@ -1,6 +1,5 @@
 ---
 - name: Install OCI Python SDK
-  connection: local
   pip:
     name: oci
     state: present

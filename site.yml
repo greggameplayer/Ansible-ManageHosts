@@ -1,7 +1,9 @@
 ---
 # This playbook is used to attribute roles
+- hosts: localhost
+  roles:
+    - setup
 
 - hosts: oci
   tasks:
-    - include: roles/setup/tasks/oci.yml
     - include: roles/reboot/tasks/oci.yml
