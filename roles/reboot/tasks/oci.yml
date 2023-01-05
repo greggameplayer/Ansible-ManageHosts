@@ -1,7 +1,12 @@
 ---
 # This playbook is used to reboot oci host
 - name: Reboot OCI host
-  connection: local
   oracle.oci.oci_compute_instance_actions:
     instance_id: "{{ instance_id }}"
     action: 'softreset'
+  register: reboot_result
+  delegate_to: localhost
+- name: Show reboot result
+  debug:
+    msg: "{{ reboot_result }}"
+  delegate_to: localhost
