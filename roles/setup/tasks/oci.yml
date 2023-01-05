@@ -1,0 +1,7 @@
+---
+- name: Install OCI Python SDK
+  pip:
+    name: oci
+    state: present
+    executable: pip3
+  become: yes
