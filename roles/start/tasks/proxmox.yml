@@ -2,9 +2,11 @@
 # This playbook is used to start proxmox host
 - name: Start Proxmox host
   community.general.proxmox:
-    vmid: "{{ inventory_hostname }}"
+    vmid: "{{ item }}"
     state: started
     timeout: 90
+  with_items:
+    - "{{ proxmox_vmids }}"
   delegate_to: localhost
   tags:
     - start
