@@ -1,6 +1,6 @@
 ---
 # This playbook is used to attribute roles
-- hosts: local
+- hosts: localhost
   roles:
     - setup
 
