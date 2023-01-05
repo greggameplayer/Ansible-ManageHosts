@@ -6,7 +6,3 @@
     action: 'softreset'
   register: reboot_result
   delegate_to: localhost
-- name: Show reboot result
-  debug:
-    msg: "{{ reboot_result }}"
-  delegate_to: localhost
