@@ -12,6 +12,8 @@
     vmid: "{{ item }}"
     api_host: '{{ lookup("env", "PROXMOX_URL") }}'
     api_user: '{{ lookup("env", "PROXMOX_USER") }}'
+    api_token_id: '{{ lookup("env", "PROXMOX_TOKEN_ID") }}'
+    api_token_secret: '{{ lookup("env", "PROXMOX_TOKEN_SECRET") }}'
     state: started
     timeout: 90
   loop: "{{ proxmox_vmids }}"
