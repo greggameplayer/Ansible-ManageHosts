@@ -3,12 +3,13 @@
 - name: Start Proxmox host
   community.general.proxmox:
     vmid: "{{ item }}"
-    api_host: '{{ inventory_hostname }}'
+    api_host: '{{ lookup("env", "PROXMOX_URL") }}'
     api_user: '{{ lookup("env", "PROXMOX_USER") }}'
     api_token_id: '{{ lookup("env", "PROXMOX_TOKEN_ID") }}'
     api_token_secret: '{{ lookup("env", "PROXMOX_TOKEN_SECRET") }}'
     state: started
     timeout: 90
+    validate_certs: false
   loop: "{{ proxmox_vmids }}"
   tags:
     - start
