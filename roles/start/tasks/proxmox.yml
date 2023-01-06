@@ -3,11 +3,9 @@
 - name: Show proxmox_vmids
   debug:
     var: item
-  delegate_to: localhost
 
 - name: Start Proxmox host
   community.general.proxmox:
     vmid: "{{ item }}"
     state: started
     timeout: 90
-  delegate_to: localhost
