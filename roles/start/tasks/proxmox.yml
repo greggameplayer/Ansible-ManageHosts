@@ -2,8 +2,7 @@
 # This playbook is used to start proxmox host
 - name: Show proxmox_vmids
   debug:
-    msg: "{{ item }}"
-  loop: "{{ proxmox_vmids }}"
+    msg: "{{ proxmox_vmids }}"
   delegate_to: localhost
 
 - name: Start Proxmox host
