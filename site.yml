@@ -11,3 +11,5 @@
 - hosts: proxmox
   tasks:
     - include_tasks: roles/start/tasks/proxmox.yml
+      tags:
+        - start
