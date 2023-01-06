@@ -10,5 +10,5 @@
 
 - hosts: proxmox
   tasks:
-    - include: roles/setup/tasks/proxmox.yml
-    - include: roles/start/tasks/proxmox.yml
+    - import_tasks: roles/setup/tasks/proxmox.yml
+    - import_tasks: roles/start/tasks/proxmox.yml
