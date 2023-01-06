@@ -10,5 +10,6 @@
     vmid: "{{ item }}"
     state: started
     timeout: 90
-  loop: "{{ proxmox_vmids }}"
+  with_item:
+    - "{{ proxmox_vmids }}"
   delegate_to: localhost
