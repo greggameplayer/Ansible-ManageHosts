@@ -3,12 +3,14 @@
 
 - hosts: oci
   tasks:
-    - include_tasks: roles/setup/tasks/oci.yml
-    - include_tasks: roles/reboot/tasks/oci.yml
-    - include_tasks: roles/stop/tasks/oci.yml
-    - include_tasks: roles/start/tasks/oci.yml
+    - import_tasks: roles/setup/tasks/oci.yml
+    - import_tasks: roles/reboot/tasks/oci.yml
+    - import_tasks: roles/stop/tasks/oci.yml
+    - import_tasks: roles/start/tasks/oci.yml
 
 - hosts: proxmox
   tasks:
     - import_tasks: roles/setup/tasks/proxmox.yml
+    - import_tasks: roles/reboot/tasks/proxmox.yml
+    - import_tasks: roles/stop/tasks/proxmox.yml
     - import_tasks: roles/start/tasks/proxmox.yml
