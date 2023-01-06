@@ -1,12 +1,5 @@
 ---
 # This playbook is used to start proxmox host
-- name: Show proxmox_vmids
-  debug:
-    var: proxmox_vmids
-  tags:
-    - start
-  delegate_to: localhost
-
 - name: Start Proxmox host
   community.general.proxmox:
     vmid: "{{ item }}"

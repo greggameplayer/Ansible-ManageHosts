@@ -1,0 +1,14 @@
+---
+- name: Install Requests and Proxmoxer Python SDK
+  pip:
+    name: "{{ item }}"
+    state: present
+    executable: pip3
+    umask: "0022"
+  loop:
+    - requests
+    - proxmoxer
+  become: yes
+  delegate_to: localhost
+  tags:
+    - setup
