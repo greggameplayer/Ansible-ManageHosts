@@ -2,7 +2,7 @@
 # This playbook is used to start proxmox host
 - name: Show proxmox_vmids
   debug:
-    var: proxmox_vmids
+    var: item
   delegate_to: localhost
 
 - name: Start Proxmox host
@@ -10,6 +10,4 @@
     vmid: "{{ item }}"
     state: started
     timeout: 90
-  with_items:
-    - "{{ proxmox_vmids }}"
   delegate_to: localhost

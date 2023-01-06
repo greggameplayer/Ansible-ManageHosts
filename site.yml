@@ -11,5 +11,9 @@
 - hosts: proxmox
   tasks:
     - include_tasks: roles/start/tasks/proxmox.yml
+      loop: "{{ proxmox_vmids }}"
+      loop_control:
+          loop_var: item
+          index_var: index
       tags:
         - start
