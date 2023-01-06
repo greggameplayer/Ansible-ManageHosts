@@ -10,6 +10,8 @@
 - name: Start Proxmox host
   community.general.proxmox:
     vmid: "{{ item }}"
+    api_host: "{{ api_host }}"
+    api_user: "{{ api_user }}"
     state: started
     timeout: 90
   loop: "{{ proxmox_vmids }}"
