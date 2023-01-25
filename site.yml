@@ -14,3 +14,9 @@
     - import_tasks: roles/reboot/tasks/proxmox.yml
     - import_tasks: roles/stop/tasks/proxmox.yml
     - import_tasks: roles/start/tasks/proxmox.yml
+
+- hosts: docker
+  tasks:
+    - import_tasks: roles/reboot/tasks/docker.yml
+    - import_tasks: roles/stop/tasks/docker.yml
+    - import_tasks: roles/start/tasks/docker.yml

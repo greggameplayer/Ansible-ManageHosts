@@ -1,0 +1,8 @@
+---
+# This playbook is used to stop container from docker host
+- name: Stop Container
+  community.docker.docker_container:
+    name: "{{ container_id }}"
+    state: stopped
+  tags:
+    - stop

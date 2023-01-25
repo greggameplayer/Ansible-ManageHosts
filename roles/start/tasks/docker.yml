@@ -1,0 +1,8 @@
+---
+# This playbook is used to start container from docker host
+- name: Start Container
+  community.docker.docker_container:
+    name: "{{ container_id }}"
+    state: started
+  tags:
+    - start

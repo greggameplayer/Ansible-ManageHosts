@@ -1,0 +1,9 @@
+---
+# This playbook is used to restart container from docker host
+- name: Restart Container
+  community.docker.docker_container:
+    name: "{{ container_id }}"
+    restart: yes
+    state: started
+  tags:
+    - reboot
