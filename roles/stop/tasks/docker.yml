@@ -2,7 +2,8 @@
 # This playbook is used to stop container from docker host
 - name: Stop Container
   community.docker.docker_container:
-    name: "{{ container_id }}"
+    name: "{{ item }}"
     state: stopped
+  loop: "{{ container_ids }}"
   tags:
     - stop
